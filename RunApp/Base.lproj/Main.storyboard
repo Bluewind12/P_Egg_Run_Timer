@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-0m-hIO">
-                                <rect key="frame" x="22" y="435" width="370" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-0m-hIO">
+                                <rect key="frame" x="20" y="124" width="374" height="29"/>
                                 <segments>
                                     <segment title="1"/>
                                     <segment title="2"/>
@@ -34,34 +33,69 @@
                                     <action selector="Select:" destination="BYZ-38-t0r" eventType="valueChanged" id="SbU-O4-GWl"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-wm-KJG">
-                                <rect key="frame" x="332" y="470" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-RH-8Cz">
+                                <rect key="frame" x="20" y="167" width="30" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <action selector="OKButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCK-Oi-lY9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-wm-KJG">
+                                <rect key="frame" x="332" y="167" width="62" height="30"/>
                                 <state key="normal" title="通知削除"/>
                                 <connections>
                                     <action selector="CanselTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98c-Q6-uWD"/>
                                     <action selector="OKButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phF-pk-C05"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-RH-8Cz">
-                                <rect key="frame" x="20" y="470" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="OK"/>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="XTg-KN-YY5">
+                                <rect key="frame" x="290" y="50" width="94" height="29"/>
                                 <connections>
-                                    <action selector="OKButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sCK-Oi-lY9"/>
+                                    <action selector="funTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="V1o-wJ-DeZ"/>
                                 </connections>
-                            </button>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="10分" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vn6-16-lui">
+                                <rect key="frame" x="106" y="50" width="174" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1km辺り" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iyx-MM-mHi">
+                                <rect key="frame" x="31" y="56" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vn6-16-lui" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="2KD-2f-wiY"/>
+                            <constraint firstItem="TEm-RH-8Cz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9On-3W-URQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XTg-KN-YY5" secondAttribute="trailing" constant="30" id="B89-6V-iIS"/>
+                            <constraint firstItem="Iyx-MM-mHi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="HFf-CE-zGW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bIO-wm-KJG" secondAttribute="trailing" constant="20" id="ZLw-NU-p18"/>
+                            <constraint firstItem="Iyx-MM-mHi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="avI-h4-okC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NNh-0m-hIO" secondAttribute="trailing" constant="20" id="ff8-e5-Jv5"/>
+                            <constraint firstItem="NNh-0m-hIO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gy2-1E-Pdn"/>
+                            <constraint firstItem="vn6-16-lui" firstAttribute="leading" secondItem="Iyx-MM-mHi" secondAttribute="trailing" constant="10" id="ieu-VH-N6M"/>
+                            <constraint firstItem="NNh-0m-hIO" firstAttribute="top" secondItem="XTg-KN-YY5" secondAttribute="bottom" constant="45" id="osP-Yu-QvG"/>
+                            <constraint firstItem="TEm-RH-8Cz" firstAttribute="top" secondItem="NNh-0m-hIO" secondAttribute="bottom" constant="15" id="qFt-ln-QfU"/>
+                            <constraint firstItem="XTg-KN-YY5" firstAttribute="leading" secondItem="vn6-16-lui" secondAttribute="trailing" constant="10" id="tSW-pg-JWu"/>
+                            <constraint firstItem="XTg-KN-YY5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="tYI-79-p5c"/>
+                            <constraint firstItem="bIO-wm-KJG" firstAttribute="top" secondItem="NNh-0m-hIO" secondAttribute="bottom" constant="15" id="wxF-2o-Mk9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="OKButton" destination="TEm-RH-8Cz" id="cbL-OH-1iy"/>
+                        <outlet property="funStep" destination="XTg-KN-YY5" id="8iv-1P-ft7"/>
+                        <outlet property="funText" destination="vn6-16-lui" id="qfk-Xl-Oqp"/>
+                        <outlet property="segseg" destination="NNh-0m-hIO" id="rpT-PN-wxj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="137.68115942028987" y="136.95652173913044"/>
         </scene>
     </scenes>
 </document>

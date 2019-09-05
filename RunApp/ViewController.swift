@@ -12,6 +12,11 @@ import CoreMotion
 
 class ViewController: UIViewController {
     @IBOutlet weak var OKButton: UIButton!
+    
+    @IBOutlet weak var funStep: UIStepper!
+    
+    @IBOutlet weak var segseg: UISegmentedControl!
+    @IBOutlet weak var funText: UILabel!
     var segselect = 15 * 60
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +59,7 @@ class ViewController: UIViewController {
         // 通知のメッセージセット
         content.title = ""
         content.body = "卵帰りそう！"
-        content.sound = UNNotificationSound.default
+        content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue:  "se_maoudamashii_onepoint24.mp3"))
         // 通知スタイルを指定
         let request = UNNotificationRequest(identifier: "1234", content: content, trigger: trigger)
         
@@ -89,22 +94,43 @@ class ViewController: UIViewController {
     @IBAction func Select(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            segselect =  10 * 60
+            segselect = Int(funStep.value) * 60
         case 1:
-            segselect =  25 * 60
+            segselect =  Int(funStep.value) *  2 * 60
         case 2:
-            segselect =  30 * 60
+            segselect =  Int(funStep.value * 2.5) * 60
         case 3:
-            segselect = 45 * 60
+            segselect = Int(funStep.value *  3.5) * 60
         case 4:
-            segselect =  60 * 60
+            segselect =  Int(funStep.value) *  5 * 60
         case 5:
-            segselect =  80 * 60
+            segselect =  Int(funStep.value) *  7 * 60
         case 6:
-            segselect =  120 * 60
+            segselect =  Int(funStep.value) *  10 * 60
         default:
-            segselect =  5
+            segselect = Int(funStep.value) *   5
         }
         print("TEST")
+    }
+    @IBAction func funTap(_ sender: Any) {
+        funText.text = String(Int(funStep.value))+"分"
+        switch segseg.selectedSegmentIndex {
+        case 0:
+            segselect = Int(funStep.value) * 60
+        case 1:
+            segselect =  Int(funStep.value) *  2 * 60
+        case 2:
+            segselect =  Int(funStep.value * 2.5) * 60
+        case 3:
+            segselect = Int(funStep.value *  3.5) * 60
+        case 4:
+            segselect =  Int(funStep.value) *  5 * 60
+        case 5:
+            segselect =  Int(funStep.value) *  7 * 60
+        case 6:
+            segselect =  Int(funStep.value) * 10 * 60
+        default:
+            segselect = Int(funStep.value) *   5
+        }
     }
 }
