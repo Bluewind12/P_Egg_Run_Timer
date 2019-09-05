@@ -16,6 +16,7 @@
 		189F8E9D2320E1D3004EAE9B /* RunAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F8E9C2320E1D3004EAE9B /* RunAppUITests.swift */; };
 		189F8EB12320E44F004EAE9B /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F8EB02320E44E004EAE9B /* HealthKitUI.framework */; };
 		189F8EB32320E455004EAE9B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F8EB22320E455004EAE9B /* CoreMotion.framework */; };
+		189F8EB823215B62004EAE9B /* se_maoudamashii_onepoint24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189F8EB623215B61004EAE9B /* se_maoudamashii_onepoint24.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		189F8EAD2320E1DA004EAE9B /* RunApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunApp.entitlements; sourceTree = "<group>"; };
 		189F8EB02320E44E004EAE9B /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
 		189F8EB22320E455004EAE9B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		189F8EB623215B61004EAE9B /* se_maoudamashii_onepoint24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = se_maoudamashii_onepoint24.mp3; path = Assets.xcassets/se_maoudamashii_onepoint24.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				189F8EAD2320E1DA004EAE9B /* RunApp.entitlements */,
 				189F8E7C2320E1D1004EAE9B /* AppDelegate.swift */,
+				189F8EB623215B61004EAE9B /* se_maoudamashii_onepoint24.mp3 */,
 				189F8E7E2320E1D1004EAE9B /* ViewController.swift */,
 				189F8E802320E1D1004EAE9B /* Main.storyboard */,
 				189F8E832320E1D3004EAE9B /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			files = (
 				189F8E872320E1D3004EAE9B /* LaunchScreen.storyboard in Resources */,
 				189F8E842320E1D3004EAE9B /* Assets.xcassets in Resources */,
+				189F8EB823215B62004EAE9B /* se_maoudamashii_onepoint24.mp3 in Resources */,
 				189F8E822320E1D1004EAE9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

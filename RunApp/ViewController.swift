@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import  UserNotifications
+import UserNotifications
 import CoreMotion
 
 class ViewController: UIViewController {
@@ -59,10 +59,9 @@ class ViewController: UIViewController {
         // 通知のメッセージセット
         content.title = ""
         content.body = "卵帰りそう！"
-        content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue:  "se_maoudamashii_onepoint24.mp3"))
+        content.sound = UNNotificationSound.init(named: UNNotificationSoundName(rawValue:"se_maoudamashii_onepoint24.mp3"))
         // 通知スタイルを指定
         let request = UNNotificationRequest(identifier: "1234", content: content, trigger: trigger)
-        
         // 通知をセット
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
         let alert: UIAlertController = UIAlertController(title: "確定", message: "大体の目安："+String(segselect/60)+"分", preferredStyle:  UIAlertController.Style.alert)
@@ -128,7 +127,7 @@ class ViewController: UIViewController {
         case 5:
             segselect =  Int(funStep.value) *  7 * 60
         case 6:
-            segselect =  Int(funStep.value) * 10 * 60
+            segselect =  Int(funStep.value)
         default:
             segselect = Int(funStep.value) *   5
         }
