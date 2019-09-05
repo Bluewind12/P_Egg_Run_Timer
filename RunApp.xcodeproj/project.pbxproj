@@ -14,6 +14,9 @@
 		189F8E872320E1D3004EAE9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189F8E852320E1D3004EAE9B /* LaunchScreen.storyboard */; };
 		189F8E922320E1D3004EAE9B /* RunAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F8E912320E1D3004EAE9B /* RunAppTests.swift */; };
 		189F8E9D2320E1D3004EAE9B /* RunAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189F8E9C2320E1D3004EAE9B /* RunAppUITests.swift */; };
+		189F8EB12320E44F004EAE9B /* HealthKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F8EB02320E44E004EAE9B /* HealthKitUI.framework */; };
+		189F8EB32320E455004EAE9B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189F8EB22320E455004EAE9B /* CoreMotion.framework */; };
+		189F8EB52320EE65004EAE9B /* se_maoudamashii_onepoint24.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189F8EB42320EE65004EAE9B /* se_maoudamashii_onepoint24.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		189F8E982320E1D3004EAE9B /* RunAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189F8E9C2320E1D3004EAE9B /* RunAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunAppUITests.swift; sourceTree = "<group>"; };
 		189F8E9E2320E1D3004EAE9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189F8EAD2320E1DA004EAE9B /* RunApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RunApp.entitlements; sourceTree = "<group>"; };
+		189F8EB02320E44E004EAE9B /* HealthKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKitUI.framework; path = System/Library/Frameworks/HealthKitUI.framework; sourceTree = SDKROOT; };
+		189F8EB22320E455004EAE9B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		189F8EB42320EE65004EAE9B /* se_maoudamashii_onepoint24.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = se_maoudamashii_onepoint24.mp3; path = "../../../../Downloads/いcおおん/se_maoudamashii_onepoint24.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189F8EB32320E455004EAE9B /* CoreMotion.framework in Frameworks */,
+				189F8EB12320E44F004EAE9B /* HealthKitUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				189F8E902320E1D3004EAE9B /* RunAppTests */,
 				189F8E9B2320E1D3004EAE9B /* RunAppUITests */,
 				189F8E7A2320E1D1004EAE9B /* Products */,
+				189F8EAA2320E1DA004EAE9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +107,8 @@
 		189F8E7B2320E1D1004EAE9B /* RunApp */ = {
 			isa = PBXGroup;
 			children = (
+				189F8EB42320EE65004EAE9B /* se_maoudamashii_onepoint24.mp3 */,
+				189F8EAD2320E1DA004EAE9B /* RunApp.entitlements */,
 				189F8E7C2320E1D1004EAE9B /* AppDelegate.swift */,
 				189F8E7E2320E1D1004EAE9B /* ViewController.swift */,
 				189F8E802320E1D1004EAE9B /* Main.storyboard */,
@@ -123,6 +135,15 @@
 				189F8E9E2320E1D3004EAE9B /* Info.plist */,
 			);
 			path = RunAppUITests;
+			sourceTree = "<group>";
+		};
+		189F8EAA2320E1DA004EAE9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				189F8EB22320E455004EAE9B /* CoreMotion.framework */,
+				189F8EB02320E44E004EAE9B /* HealthKitUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +214,17 @@
 				TargetAttributes = {
 					189F8E782320E1D1004EAE9B = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 					189F8E8C2320E1D3004EAE9B = {
 						CreatedOnToolsVersion = 10.3;
@@ -231,6 +263,7 @@
 			files = (
 				189F8E872320E1D3004EAE9B /* LaunchScreen.storyboard in Resources */,
 				189F8E842320E1D3004EAE9B /* Assets.xcassets in Resources */,
+				189F8EB52320EE65004EAE9B /* se_maoudamashii_onepoint24.mp3 in Resources */,
 				189F8E822320E1D1004EAE9B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
