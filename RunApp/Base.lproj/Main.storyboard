@@ -34,8 +34,17 @@
                                     <action selector="Select:" destination="BYZ-38-t0r" eventType="valueChanged" id="SbU-O4-GWl"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIO-wm-KJG">
+                                <rect key="frame" x="332" y="470" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="通知削除"/>
+                                <connections>
+                                    <action selector="CanselTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="98c-Q6-uWD"/>
+                                    <action selector="OKButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="phF-pk-C05"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEm-RH-8Cz">
-                                <rect key="frame" x="192" y="470" width="30" height="30"/>
+                                <rect key="frame" x="20" y="470" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="OK"/>
                                 <connections>

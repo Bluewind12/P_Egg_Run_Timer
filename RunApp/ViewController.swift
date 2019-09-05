@@ -56,11 +56,36 @@ class ViewController: UIViewController {
         content.body = "卵帰りそう！"
         content.sound = UNNotificationSound.default
         // 通知スタイルを指定
-        let request = UNNotificationRequest(identifier: "uuid", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "1234", content: content, trigger: trigger)
         
         // 通知をセット
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+        let alert: UIAlertController = UIAlertController(title: "確定", message: "大体の目安："+String(segselect/60)+"分", preferredStyle:  UIAlertController.Style.alert)
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            print("OK")
+        })
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
+    
+    @IBAction func CanselTap(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController(title: "設定削除", message: "通知を削除します", preferredStyle:  UIAlertController.Style.alert)
+        // OKボタン
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["1234"])
+        })
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.default, handler:{
+            (action: UIAlertAction!) -> Void in
+            print("cancel")
+        })
+        alert.addAction(cancelAction)
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func Select(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
