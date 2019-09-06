@@ -20,6 +20,15 @@ class ViewController: UIViewController {
     var segselect = 15 * 60
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let defaults = UserDefaults.standard
+        let loadedKiro = defaults.object(forKey: "KiroFun") as? Int
+        if (loadedKiro != nil) {
+            funText.text = String(loadedKiro!)+"分"
+            funStep.value = Double(loadedKiro!)
+        }
+        
         // Do any additional setup after loading the view.
         if #available(iOS 10.0, *) {
             // iOS 10
@@ -112,6 +121,9 @@ class ViewController: UIViewController {
         print("TEST")
     }
     @IBAction func funTap(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        defaults.set(funStep.value, forKey: "KiroFun")
         funText.text = String(Int(funStep.value))+"分"
         switch segseg.selectedSegmentIndex {
         case 0:
